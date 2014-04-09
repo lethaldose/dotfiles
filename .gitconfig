@@ -1,0 +1,89 @@
+# ~/.gitconfig from @boblet
+# initially based on http://rails.wincent.com/wiki/Git_quickstart
+#  https://gist.github.com/pksunkara/988716
+
+[user]
+	email = atulverma82@gmail.com
+	name = Atul Verma
+[push]
+	default = simple
+[color]
+  ui = auto
+	interactive = auto
+
+[core]
+  editor = vim
+	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	excludesfile = ~/.gitignore
+	legacyheaders = false # >git 1.5
+	quotepath = false
+# http://stackoverflow.com/questions/136178/git-diff-handling-long-lines
+	pager = less -r
+# if ↑ doesn’t work, try: pager = less -+$LESS -FRX
+[diff]
+	tool = vimdiff
+[repack]
+	usedeltabaseoffset = true # >git 1.5
+[alias]
+	s = status
+	a = !git add . && git status
+	au = !git add -u . && git status
+	aa = !git add . && git add -u . && git status
+	c = commit
+	cm = commit -m
+	ca = commit --amend # careful
+	ac = !git add . && git commit
+	acm = !git add . && git commit -m
+	l = log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+	ll = log --stat --abbrev-commit
+	d = diff --color-words
+	dh = diff --color-words head
+  master = checkout master
+  #############
+	sa = stash apply
+	sc = stash clear
+	sd = stash drop
+	sl = stash list
+	sp = stash pop
+	ss = stash save
+	sw = stash show
+	#############
+	w = show
+	wp = show -p
+	wr = show -p --no-color
+	#############
+  #############
+	ls = ls-files
+	lsf = "!git ls-files | grep -i"
+  #############
+	co = checkout
+  #############
+	pl = pull
+	plu = pull -u
+	plo = pull origin
+	plp = pull upstream
+	plom = pull origin master
+	plpm = pull upstream master
+	#############
+	pb = pull --rebase
+	pbo = pull --rebase origin
+	pbp = pull --rebase upstream
+	pbom = pull --rebase origin master
+	pbpm = pull --rebase upstream master
+	#############
+	rb = rebase
+	rba = rebase --abort
+	rbc = rebase --continue
+	rbi = rebase --interactive
+  rbs = rebase --skip
+
+	spull = svn rebase
+	spush = svn dcommit
+	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+[github]
+	user = [GH username]
+	token = [API token from https://github.com/account/admin]
+[diff]
+# git does copy/rename *detection*. if you want it to track copies/renames:
+# http://stackoverflow.com/questions/1043388/record-file-copy-operation-with-git
+#	renames = copies
