@@ -3,25 +3,27 @@
 #  https://gist.github.com/pksunkara/988716
 
 [user]
-	email = atulverma82@gmail.com
+	email = atul.verma@tabcorp.com.au
 	name = Atul Verma
+	signingkey = 8B3E985D2CF840B6
 [push]
 	default = simple
 [color]
-  ui = auto
+	ui = true
 	interactive = auto
 
 [core]
   editor = vim
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/atul/.gitignore
 	legacyheaders = false # >git 1.5
 	quotepath = false
 # http://stackoverflow.com/questions/136178/git-diff-handling-long-lines
-	pager = less -r
+	pager = diff-so-fancy | less --tabs=4 -RFX
 # if ↑ doesn’t work, try: pager = less -+$LESS -FRX
 [diff]
 	tool = vimdiff
+	compactionHeuristic = true
 [repack]
 	usedeltabaseoffset = true # >git 1.5
 [alias]
@@ -80,6 +82,7 @@
 	spull = svn rebase
 	spush = svn dcommit
 	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+	stashq = -c commit.gpgsign=false stash
 [github]
 	user = [GH username]
 	token = [API token from https://github.com/account/admin]
@@ -87,3 +90,38 @@
 # git does copy/rename *detection*. if you want it to track copies/renames:
 # http://stackoverflow.com/questions/1043388/record-file-copy-operation-with-git
 #	renames = copies
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[fetch]
+	prune = true
+[commit]
+	gpgsign = true
+[pager]
+	log =  diff-so-fancy | less --tabs=4 -RFX #diff-highlight | less
+	show = diff-so-fancy | less --tabs=4 -RFX #diff-highlight | less
+	diff = diff-so-fancy | less --tabs=4 -RFX
+[interactive]
+	diffFilter = diff-highlight
+[gpg]
+	program = /usr/local/bin/gpg
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 227
+	frag = magenta bold
+	commit = 227 bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[diff-so-fancy]
+	first-run = false
