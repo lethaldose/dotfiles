@@ -5,7 +5,7 @@
 [user]
 	email = atul.verma@tabcorp.com.au
 	name = Atul Verma
-	signingkey = 8B3E985D2CF840B6
+	signingkey = xxxxx
 [push]
 	default = simple
 [color]
