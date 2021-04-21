@@ -1,0 +1,88 @@
+{
+	"workbench.iconTheme": "Monokai Pro Icons",
+	"editor.minimap.enabled": false,
+	"editor.tabSize": 2,
+	"json.format.enable": false,
+	"javascript.format.enable": false,
+	"javascript.format.insertSpaceAfterSemicolonInForStatements": false,
+	"javascript.format.insertSpaceBeforeAndAfterBinaryOperators": false,
+	"javascript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
+	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+	"javascript.format.insertSpaceAfterCommaDelimiter": false,
+	"editor.fontLigatures": true,
+	"workbench.editor.enablePreviewFromQuickOpen": false,
+	"typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+	"editor.fontFamily": "Inconsolata, Consolas, Menlo, Monaco, 'Courier New', monospace",
+	"editor.fontSize": 18,
+	"jest.enableCodeLens": false,
+	"eslint.enable": false,
+	"eslint.autoFixOnSave": true,
+	"go.autocompleteUnimportedPackages": true,
+	"editor.formatOnSave": true,
+	"editor.formatOnSaveTimeout": 5000,
+	"files.trimFinalNewlines": true,
+	"files.trimTrailingWhitespace": true,
+	"trailing-spaces.trimOnSave": true,
+	"jest.pathToJest": "",
+	"workbench.colorTheme": "Monokai",
+	"workbench.tree.indent": 20,
+	"files.autoSaveDelay": 0,
+	"gitlens.blame.dateFormat": "",
+	"go.formatTool": "goimports",
+	"files.autoSave": "afterDelay",
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"search.searchOnType": false,
+	"prettier.printWidth": 120,
+	"terminal.integrated.shell.osx": "/bin/zsh",
+	"files.associations": {
+		"*.js": "javascriptreact"
+	},
+	"workbench.startupEditor": "newUntitledFile",
+	"prettier.jsxSingleQuote": true,
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"prettier.tabWidth": 4,
+	"prettier.singleQuote": true,
+	"prettier.useEditorConfig": false,
+	"prettier.useTabs": true,
+	"prettier.configPath": ".prettierrc",
+	"editor.codeActionsOnSave": {
+		"source.fixAll": true
+	},
+	"[typescript]": {
+		"editor.formatOnPaste": true,
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": true
+		}
+	},
+	"[vue]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"eslint.codeAction.showDocumentation": {
+		"enable": true
+	},
+	"[xml]": {
+		"editor.defaultFormatter": "DotJoshJohnson.xml"
+	},
+	"vetur.format.defaultFormatter.html": "prettyhtml",
+	"vetur.format.defaultFormatter.js": "prettier-eslint",
+	"javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+	"javascript.format.placeOpenBraceOnNewLineForControlBlocks": false,
+	"javascript.format.placeOpenBraceOnNewLineForFunctions": false,
+	"typescript.format.insertSpaceBeforeFunctionParenthesis": true,
+	"typescript.format.placeOpenBraceOnNewLineForControlBlocks": false,
+	"typescript.format.placeOpenBraceOnNewLineForFunctions": false,
+	"jest.autoEnable": false,
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"eslint.packageManager": "yarn",
+	"prettier.packageManager": "yarn"
+}
